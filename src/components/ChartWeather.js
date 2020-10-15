@@ -47,23 +47,29 @@ class ChartWeather extends Component {
                     <ResponsiveContainer
                         className='responsiveContainer'
                         width='100%'
-                        height='75%'>
+                        height='70%'>
                         <AreaChart
                             className='areaChart'
                             data={data}
-                            margin={{top: 0, right: 60, left: 0, bottom: 0}}>
-                            <XAxis dataKey='time' tick={{fill: "gray"}} />
+                            margin={{top: 5, right: 60, left: 0, bottom: 5}}>
+                            <XAxis
+                                dataKey='time'
+                                tick={{fill: "#bebebe"}}
+                                 axisLine={false}
+                                style={{fontSize: "0.5rem"}}
+                                tickMargin={8}    
+                            />
                             <YAxis
                                 type='number'
                                 domain={["dataMin-1", "dataMax+1"]}
                                 tick={false}
                                 axisLine={false}
                             />
-                            <CartesianGrid strokeDasharray='3 3' />
+                            {/* <CartesianGrid strokeDasharray='3 3' /> */}
                             <Area
                                 type='monotone'
                                 dataKey={dataKeys[this.state.dataKey]}
-                                stroke='#ffcc00'
+                                stroke='#ff8800'
                                 fill='#fff5cc'
                                 fillOpacity={1}
                                 strokeWidth={3}

@@ -3,13 +3,16 @@
     width: 40%;
     border-radius: 5px;
     padding: 0.25rem;
-    border: 1px solid gray;
+    border: 1px solid $border_color; 
     @include flex(row, space-between, center);
     input {
         font-size: 1rem;
         line-height: 1.5rem;
         padding: 0 0.5rem;
         width: 100%;
+        &::placeholder {
+            color: rgb(139, 138, 138);
+        }
     }
     button {
         width: 2rem;

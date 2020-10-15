@@ -1,5 +1,6 @@
 // reset css
-html, * {
+html,
+* {
     margin: 0;
     border: 0;
     padding: 0;
@@ -8,6 +9,8 @@ html, * {
     outline: none;
     background: transparent;
     box-sizing: border-box;
+    background: rgb(100, 100, 100);
+    color: rgb(230, 230, 230);
 }
 
 // mixin
@@ -20,4 +23,5 @@ html, * {
 
 // variables
 $width_app: 750px;
-$height_app: 500px;
+$height_app: 400px;
+$border_color: #bebebe;

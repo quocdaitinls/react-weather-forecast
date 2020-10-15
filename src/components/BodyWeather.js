@@ -12,7 +12,7 @@ function BodyWeather(props) {
     if (currentData) {
         return (
             <div className='BodyWeather'>
-                <CurrentWeather currentData={currentData} setScale={setScale} />
+                <CurrentWeather currentData={currentData} setScale={setScale} scale={props.scale}/>
                 <WeatherForecast
                     _7DaysData={_7DaysData}
                     _5DaysData={_5DaysData}

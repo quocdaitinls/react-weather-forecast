@@ -1,6 +1,7 @@
 @import "../Abstract.scss";
 .ChartWeather {
     width: 100%;
-    height: 100%;
+    height: 150px;
+    margin: 0.5rem 0;
     @include flex(column, space-between, center);
 }

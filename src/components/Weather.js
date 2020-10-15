@@ -108,6 +108,7 @@ class Weather extends Component {
                     currentData={this.state.currentData}
                     _7DaysData={this.state._7DaysData}
                     _5DaysData={this.state._5DaysData}
+                    scale={this.state.scale}
                 />
             </div>
         );

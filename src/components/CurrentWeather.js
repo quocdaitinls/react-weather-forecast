@@ -12,7 +12,7 @@ function CurrentWeather(props) {
     return (
         <div className="CurrentWeather">
             <CurrentDisplay data={data} setScale={setScale}/>
-            <CurrentInfo data={data}/>
+            <CurrentInfo data={data}  scale={props.scale}/>
         </div>
     );
 }
