@@ -1,0 +1,6 @@
+@import '../Abstract.scss';
+.Forecast7Days {
+    width: 100%;
+    height: 45%;
+    @include flex(row,space-between,center);
+}

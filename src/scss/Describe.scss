@@ -1,0 +1,6 @@
+@import "../Abstract.scss";
+.Describe {
+    width: 55%;
+    padding: 0.25rem 0.5rem;
+    @include flex(column, space-between, flex-start);
+}

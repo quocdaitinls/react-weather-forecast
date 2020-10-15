@@ -1,0 +1,7 @@
+@import '../Abstract.scss';
+.ChartOption {
+    width: 100%;
+    height: 20%;
+    padding: 0 2.5rem;
+    @include flex(row,flex-end,center);
+}

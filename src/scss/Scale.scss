@@ -1,0 +1,9 @@
+@import "../Abstract.scss";
+.Scale {
+    button {
+        padding: 0.2rem;
+        &:first-child {
+            border-right: 1px solid black;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@import "../Abstract.scss";
+.HeaderWeather {
+    width: 100%;
+    padding: 0 0.5rem;
+    margin: 0.5rem 0 0.25rem 0;
+    @include flex(row,space-between,center);
+}

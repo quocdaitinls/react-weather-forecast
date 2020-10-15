@@ -1,0 +1,10 @@
+@import "../Abstract.scss";
+.DailyForecast {
+    width: 12%;
+    padding: 0.2rem 0.1rem;
+    border-radius: 0.4rem;
+    @include flex(column, space-between, center);
+    &:hover {
+        border: 1px solid gray;
+    }
+}

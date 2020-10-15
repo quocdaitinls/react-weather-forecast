@@ -1,0 +1,9 @@
+@import '../Abstract.scss';
+.Weather {
+    width: $width_app;
+    height: $height_app;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    @include flex(column,space-between,center);
+}

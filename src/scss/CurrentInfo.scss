@@ -1,0 +1,7 @@
+@import '../Abstract.scss';
+.CurrentInfo {
+    width: 50%;
+    height: 100%;
+    padding: 0.5rem;
+    @include flex(column,center,flex-start);
+}

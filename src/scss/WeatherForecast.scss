@@ -1,0 +1,6 @@
+@import "../Abstract.scss";
+.WeatherForecast {
+    width: 100%;
+    height: 100%;
+    @include flex(column, space-between,center);
+}

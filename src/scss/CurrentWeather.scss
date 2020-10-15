@@ -1,0 +1,6 @@
+@import '../Abstract.scss';
+.CurrentWeather {
+    width: 100%;
+    height: 30%;
+    @include flex(row,space-between, center); 
+}
