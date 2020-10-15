@@ -96,6 +96,12 @@ class Weather extends Component {
             })
             .catch((err) => console.log(err));
     };
+    componentDidUpdate() {
+        //auto call AJAX after least 5 mins
+        setInterval(() => {
+            this.fetchData();
+        }, 300000);
+    }
     render() {
         return (
             <div className='Weather'>
