@@ -2,5 +2,7 @@
 .Describe {
     width: 55%;
     padding: 0.25rem 0.5rem 0 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 300;
     @include flex(column, space-between, flex-start);
 }
