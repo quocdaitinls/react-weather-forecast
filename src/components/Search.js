@@ -30,7 +30,7 @@ class Search extends Component {
                     type='text'
                     onChange={this.changeInput}
                     onKeyUp={this.onKeyUp}
-                    placeholder="Enter your city..."
+                    placeholder="Nhập tên thành phố..."
                 />
                 <button type='submit' onClick={this.upState}>
                     <i className='fa fa-search'></i>
