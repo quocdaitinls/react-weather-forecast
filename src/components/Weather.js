@@ -15,7 +15,7 @@ class Weather extends Component {
             _7DaysData: "",
             _5DaysData: "",
         };
-        this.key = "a63ddfcc6f9097893edff5f34dad767d";
+        this.key = "78838a983c325daca31aeba177a4481f";
     }
     setCity = (e) => {
         this.setState(
@@ -97,10 +97,10 @@ class Weather extends Component {
             .catch((err) => console.log(err));
     };
     componentDidUpdate() {
-        //auto call AJAX after least 5 mins
+        //auto call AJAX after least 30 mins
         setInterval(() => {
             this.fetchData();
-        }, 300000);
+        }, 18000000);
     }
     render() {
         return (

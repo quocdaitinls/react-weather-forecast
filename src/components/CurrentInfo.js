@@ -18,6 +18,7 @@ function CurrentInfo(props) {
         ],
         listName = ["Độ ẩm", "Gió", "Mây"],
         listUnit = ["%", scale === "C" ? "km/h" : "dặm/h", "%"],
+        listIcon = ["tint", "wind", "cloud"],
         list = listValue.map((item, index) => {
             return (
                 <InfoItem
@@ -25,6 +26,7 @@ function CurrentInfo(props) {
                     value={item}
                     unit={listUnit[index]}
                     name={listName[index]}
+                    icon={listIcon[index]}
                 />
             );
         });

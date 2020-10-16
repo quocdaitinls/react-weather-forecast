@@ -9,6 +9,8 @@ import {
     YAxis,
     CartesianGrid,
     Tooltip,
+    Label,
+    LabelList,
     Legend,
 } from "recharts";
 import {render} from "@testing-library/react";
@@ -21,16 +23,15 @@ class ChartWeather extends Component {
         };
     }
     setKey = (e) => {
-        console.log(e);
         this.setState({
             dataKey: e,
         });
     };
     render() {
-        const list = this.props.data;
-        const data = [];
-        const dataKeys = ["temp", "humidity"];
-        const dataName = ["Nhiệt độ", "Độ ẩm"];
+        const list = this.props.data,
+            data = [],
+            dataKeys = ["temp", "humidity"],
+            dataName = ["Nhiệt độ", "Độ ẩm"];
         if (list) {
             list.forEach((item, index) => {
                 if (index < 9) {
@@ -40,7 +41,6 @@ class ChartWeather extends Component {
                     data.push(u);
                 }
             });
-            // console.log(data);
             return (
                 <div className='ChartWeather'>
                     <ChartOption data={dataName} setKey={this.setKey} />
@@ -51,29 +51,35 @@ class ChartWeather extends Component {
                         <AreaChart
                             className='areaChart'
                             data={data}
-                            margin={{top: 5, right: 60, left: 0, bottom: 5}}>
+                            margin={{top: 20, right: 60, left: 0, bottom: 5}}>
                             <XAxis
                                 dataKey='time'
                                 tick={{fill: "#bebebe"}}
-                                 axisLine={false}
+                                axisLine={false}
                                 style={{fontSize: "0.5rem"}}
-                                tickMargin={8}    
+                                tickMargin={8}
                             />
                             <YAxis
                                 type='number'
-                                domain={["dataMin-1", "dataMax+1"]}
+                                domain={["dataMin-1", "dataMax+3"]}
                                 tick={false}
                                 axisLine={false}
                             />
-                            {/* <CartesianGrid strokeDasharray='3 3' /> */}
                             <Area
                                 type='monotone'
                                 dataKey={dataKeys[this.state.dataKey]}
+                                // label={{
+                                //     position: "top",
+                                //     fill: "#ff8800",
+                                // }}
+                                // style={{fontSize: "10px"}}
+                                // label={customLabel}
                                 stroke='#ff8800'
                                 fill='#fff5cc'
                                 fillOpacity={1}
-                                strokeWidth={3}
-                            />
+                                strokeWidth={3}>
+                                <LabelList dataKey={dataKeys[this.state.dataKey]} position='top' offset={10} fill="#bebebe" fontSize={10}/>
+                            </Area>
                         </AreaChart>
                     </ResponsiveContainer>
                 </div>

@@ -5,7 +5,7 @@ class Search extends Component {
         super(props);
 
         this.state = {
-            city: "",
+            city: "hanoi",
         };
     }
     changeInput = (e) => {
@@ -20,9 +20,9 @@ class Search extends Component {
     upState = () => {
         this.props.getCity(this.state.city);
     };
-    // componentDidMount() {
-    //     this.upState();
-    // }
+    componentDidMount() {
+        this.upState();
+    }
     render() {
         return (
             <div className='Search'>

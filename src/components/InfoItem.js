@@ -1,10 +1,11 @@
 import React from "react";
 import "../scss/InfoItem.scss";
-function InfoItem(props) {
+function InfoItem({icon: icon, name: name, value: value, unit: unit}) {
+    const icon_class = "fa fa-" + icon;
     return (
-        <div className='InfoItem'>
-            {props.name}: {props.value} {props.unit}
-        </div>
+        <span className='InfoItem'>
+            <i className={icon_class}></i> {name}: {value} {unit}
+        </span>
     );
 }
 
