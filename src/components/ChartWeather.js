@@ -68,17 +68,17 @@ class ChartWeather extends Component {
                             <Area
                                 type='monotone'
                                 dataKey={dataKeys[this.state.dataKey]}
-                                // label={{
-                                //     position: "top",
-                                //     fill: "#ff8800",
-                                // }}
-                                // style={{fontSize: "10px"}}
-                                // label={customLabel}
                                 stroke='#ff8800'
                                 fill='#fff5cc'
                                 fillOpacity={1}
                                 strokeWidth={3}>
-                                <LabelList dataKey={dataKeys[this.state.dataKey]} position='top' offset={10} fill="#bebebe" fontSize={10}/>
+                                <LabelList
+                                    dataKey={dataKeys[this.state.dataKey]}
+                                    position='top'
+                                    offset={10}
+                                    fill='#bebebe'
+                                    fontSize={10}
+                                />
                             </Area>
                         </AreaChart>
                     </ResponsiveContainer>

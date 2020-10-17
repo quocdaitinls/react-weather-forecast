@@ -7,11 +7,12 @@ function HeaderWeather(props) {
     function getCity(e) {
         props.getCity(e);
     }
-    const currentData=props.currentData;
+    
+    const currentData = props.currentData;
     return (
         <div className='HeaderWeather'>
-            <Describe currentData={currentData}/>
-            <Search getCity={getCity}/>
+            <Describe currentData={currentData} />
+            <Search getCity={getCity} />
         </div>
     );
 }
