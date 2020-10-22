@@ -14,25 +14,25 @@ function BodyWeather(props) {
         _5DaysData = props._5DaysData,
         _7DaysData = props._7DaysData;
 
-    for (const prop in currentData.main) {
-        currentData.main[prop] = rounding(currentData.main[prop],1);
-    }
-    [..._5DaysData].forEach((item, index) => {
-        for (const prop in item.main) {
-            item.main[prop] = rounding(item.main[prop],1);
+    if (currentData && _5DaysData && _7DaysData) {
+        for (const prop in currentData.main) {
+            currentData.main[prop] = rounding(currentData.main[prop], 1);
         }
-        _5DaysData[index] = item;
-    });
-    [..._7DaysData].forEach((item, index) => {
-        for (const prop in item.temp) {
-            item.temp[prop] = rounding(item.temp[prop],1);
-        }
-        for (const prop in item.feels_like) {
-            item.feels_like[prop] = rounding(item.feels_like[prop],1);
-        }
-        _7DaysData[index] = item;
-    });
-    if (currentData) {
+        [..._5DaysData].forEach((item, index) => {
+            for (const prop in item.main) {
+                item.main[prop] = rounding(item.main[prop], 1);
+            }
+            _5DaysData[index] = item;
+        });
+        [..._7DaysData].forEach((item, index) => {
+            for (const prop in item.temp) {
+                item.temp[prop] = rounding(item.temp[prop], 1);
+            }
+            for (const prop in item.feels_like) {
+                item.feels_like[prop] = rounding(item.feels_like[prop], 1);
+            }
+            _7DaysData[index] = item;
+        });
         return (
             <div className='BodyWeather'>
                 <CurrentWeather

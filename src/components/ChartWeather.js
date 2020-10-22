@@ -77,7 +77,7 @@ class ChartWeather extends Component {
                                     position='top'
                                     offset={10}
                                     fill='#bebebe'
-                                    fontSize={10}
+                                    style={{fontSize: "50%"}}
                                 />
                             </Area>
                         </AreaChart>
